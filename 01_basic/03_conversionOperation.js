@@ -73,3 +73,22 @@ null => 0
 
 // let booleanIsAvailable = Boolean(isAvailable);
 // console.log(booleanIsAvailable); // true
+
+
+
+// *************************  OPERATIONS  *****************************
+
+
+// let number = 4 
+// let isNegative = -number;
+// console.log(isNegative);
+
+// console.log(5+4);
+// console.log(5-4);
+// console.log(5*4);
+// console.log(5**4);
+// console.log(5/4);
+// console.log(5%4);
+
+
+console.log(+true);
