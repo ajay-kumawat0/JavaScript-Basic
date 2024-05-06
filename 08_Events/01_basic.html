@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #414141; color: #fff;">
+    <ul id="main">
+        <li class="listItem" id="one">
+            <h1>This is heading One</h1>
+        </li>
+        <li class="listItem" id="two">
+            <h1>This is heading Two</h1>
+        </li>
+        <li class="listItem" id="three">
+            <h1>This is heading Three</h1>
+        </li>
+    </ul>
+</body>
+<script>
+    // Events Propogation
+        // 1) Events Bubbling => Inside element to move outside events is know as bubbling.
+        // 2) Event Capturing => Events move from top to bottom.
+
+        // stopPropogation => It stop the events of propogation
+
+        // document.getElementById('main').addEventListener('click',function(e){
+        //     console.log("Clicked");
+        // })
+
+
+        document.getElementById('main').addEventListener('click',function(e){
+            // console.log(e.target.parentNode);
+            let remove = e.target.parentNode;
+            console.log(remove.tagName);
+            if(remove.tagName == 'LI'){
+                remove.remove()
+            }
+        })
+</script>
+</html>
