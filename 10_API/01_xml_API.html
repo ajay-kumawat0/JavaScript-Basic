@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XHML HTTP REQUEST</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <h1>XHML HTTP REQUEST</h1>
+</body>
+<script>
+    const apiRequest = 'https://api.github.com/users/ajay-kumawat0'; // API Address hold in a variable
+    let xml = new XMLHttpRequest(); // make or call an api xml http request
+    xml.open('GET', apiRequest); // make a "Get" request to catch data from API 
+    xml.onreadystatechange = function ready(){ // onreadystatechange => check xml in which state right now
+        console.log(xml.readyState); 
+        if(xml.readyState === 4){
+            // console.log(this.responseText);
+            const data = JSON.parse(this.responseText)
+            console.log(typeof data);
+            console.log(`Following : ${data.following}`);
+        }
+    }
+    xml.send();
+</script>
+</html>
