@@ -108,8 +108,8 @@ fetch('https://jsonplaceholder.typicode.com/posts')
     return response.json()
 })
 .then((data)=>{
-    console.log(data);
+    // console.log(data);
 })
 .catch((err)=>{
-    console.log(err);
+    // console.log(err);
 })
