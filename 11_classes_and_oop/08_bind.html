@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bind Method</title>
+</head>
+<body>
+    <button>Click Here</button>
+</body>
+<script>
+    class User{
+    constructor(username, email){
+        this.username = username;
+        this.email = email;
+        document.querySelector('button')
+        .addEventListener('click', this.clicked.bind(this));
+    }
+
+    clicked(){
+        console.log("Clicked on button");
+        console.log(this);
+        console.log(this.username);
+    }
+}
+
+const user1 = new User("ram", "ram@gmail.com")
+// console.log(user1.clicked());
+</script>
+</html>
