@@ -28,4 +28,4 @@ class raj extends Admin{
 
 const raj1 = new raj("Ram");
 console.log(raj1.show());
-console.log(raj1.adminId());
+// console.log(raj1.adminId());
